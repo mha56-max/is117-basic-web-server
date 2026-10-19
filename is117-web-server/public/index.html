@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1d2024">
+  <meta name="description" content="ROAM — a plain white tee for the courage to begin. Show up, put in the work, and rise to your everyday challenge.">
+  <title>ROAM — Show up. Rise above.</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/store.js" defer></script>
+</head>
+<body>
+  <div class="announcement">COURAGE STARTS WITH SHOWING UP. <span>Meet your everyday uniform ↗</span></div>
+  <header class="header">
+    <a class="wordmark" href="#" aria-label="ROAM home">ROAM<span class="brand-mark" aria-hidden="true">↗</span></a>
+    <nav aria-label="Main navigation"><a href="#the-tee">The white tee</a><a href="#our-way">Our mindset</a><a href="#field-notes">The daily challenge</a><a href="/about">About ROAM</a></nav>
+    <button class="bag-button" id="open-bag" aria-haspopup="dialog">Bag <span id="bag-count">0</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Zm3 0V5a4 4 0 0 1 8 0v2"/></svg></button>
+  </header>
+  <main>
+    <!-- Hero archetype: courage, effort, and progress. The customer takes action;
+         the tee is a simple everyday uniform, without technical performance claims. -->
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-photo" src="/assets/roam-rise.png" alt="An athlete in a plain white T-shirt running up a steep stadium stairway" fetchpriority="high">
+      <div class="hero-wash"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-cross" aria-hidden="true">↗</span> FOR THE COURAGE TO BEGIN</p>
+        <h1 id="hero-title">SHOW UP.<br><em>RISE ABOVE.</em></h1>
+        <p class="hero-description">The hardest step is the first one. Face the challenge. Put in the work. Start with a white tee, and bring your own determination.</p>
+        <a class="button button-primary" href="#the-tee">Get your everyday uniform <span aria-hidden="true">↗</span></a>
+        <a class="under-link" href="#our-way">Small steps. Stronger every day. <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-bottom"><span>THE EVERYDAY UNIFORM — NO. 001</span><span class="photo-caption">PROGRESS IS EARNED. ONE STEP AT A TIME. <span>↗</span></span></div>
+      <div class="vertical-note" aria-hidden="true">MEET THE MOMENT</div>
+    </section>
+    <div class="principles" aria-label="Our approach"><p><span>01 /</span> Show up with courage.</p><p><span>02 /</span> Put purpose into practice.</p><p><span>03 /</span> Build on yesterday.</p></div>
+
+    <section class="product section-wrap" id="the-tee" aria-labelledby="product-title">
+      <div class="product-art">
+        <span class="art-label">YOUR EVERYDAY UNIFORM</span>
+        <img src="/assets/white-tee.svg" alt="Illustration of the ROAM plain white crew-neck T-shirt" width="640" height="640" loading="lazy">
+        <div class="art-footer"><span>001 — THE EVERYDAY TEE</span><span>WHITE / ALWAYS</span></div>
+      </div>
+      <div class="product-copy">
+        <p class="eyebrow">EVERY GREAT EFFORT STARTS SOMEWHERE</p>
+        <h2 id="product-title">BIG GOALS.<br>SIMPLE BEGINNINGS.</h2>
+        <div class="product-heading"><h3>The Everyday Tee</h3><span>$28</span></div>
+        <p class="muted">A plain white crew neck. An easy silhouette. No loud logo. A simple everyday staple for the person who lets their actions speak.</p>
+        <div class="color-row"><span class="swatch" aria-hidden="true"></span> Chalk white <span>ONE COLOR. ALL YOUR RESOLVE.</span></div>
+        <!-- Commitment/consistency: a small, relevant choice (size) precedes adding
+             a tee. The choice is reversible and never uses a preselected upsell. -->
+        <div class="size-heading"><span>Choose your size</span><button class="text-button" id="open-fit">Find your fit ↗</button></div>
+        <fieldset class="sizes"><legend class="sr-only">T-shirt size</legend>
+          <label><input type="radio" name="size" value="XS"><span>XS</span></label>
+          <label><input type="radio" name="size" value="S"><span>S</span></label>
+          <label><input type="radio" name="size" value="M"><span>M</span></label>
+          <label><input type="radio" name="size" value="L"><span>L</span></label>
+          <label><input type="radio" name="size" value="XL"><span>XL</span></label>
+          <label><input type="radio" name="size" value="XXL"><span>XXL</span></label>
+        </fieldset>
+        <button class="button button-primary add-button" id="add-to-bag">Add to bag — $28 <span aria-hidden="true">↗</span></button>
+        <p class="product-status" id="product-status" role="status" aria-live="polite">Your ambition. Your effort. Your everyday tee.</p>
+        <details><summary>The idea behind the tee <span>+</span></summary><p>A simple uniform makes one decision easier. Wear it your way and focus on what matters to you. This is an everyday style essential; your progress comes from the work you put in.</p></details>
+        <details><summary>A note before you order <span>+</span></summary><p>This is a classroom storefront concept. The price and sizing are illustrative. No payment or real order is collected.</p></details>
+      </div>
+    </section>
+
+    <section class="manifesto" id="our-way" aria-labelledby="manifesto-title">
+      <div class="manifesto-top"><p class="eyebrow">THE ROAM MINDSET</p><span class="rise-mark" aria-hidden="true">↗</span><span>FOR THE EVERYDAY HERO</span></div>
+      <h2 id="manifesto-title">GREATNESS ISN’T GIVEN.<br><em>IT’S BUILT. EVERY DAY.</em></h2>
+      <div class="manifesto-bottom"><span>COURAGE. COMMITMENT. PROGRESS.</span><p>The alarm you answer. The task you’ve been putting off. The moment you choose to try again. Being a hero starts with everyday courage. We believe in showing up for yourself and for others, putting in honest effort, and making the next step count.</p></div>
+    </section>
+
+    <!-- Reciprocity: give useful information freely, without requiring an email
+         address, purchase, or promise in return. No fake scarcity or social proof. -->
+    <section class="field-notes section-wrap" id="field-notes" aria-labelledby="notes-title">
+      <div><p class="eyebrow">THE DAILY CHALLENGE / 001</p><h2 id="notes-title">SET YOUR GOAL.<br>TAKE YOUR FIRST STEP.</h2></div>
+      <div class="notes-copy"><p>Choose one thing that matters. Break it into a step you can take today. Our free daily challenge worksheet helps you turn intention into action and recognize the progress you earn.</p><a class="under-link" href="/assets/the-daily-challenge.txt" download>Get the free challenge worksheet <span aria-hidden="true">↓</span></a><span class="small-note">YOURS TO KEEP. NO EMAIL NEEDED.</span></div>
+    </section>
+  </main>
+  <footer><a class="wordmark" href="#">ROAM<span class="brand-mark" aria-hidden="true">↗</span></a><p>Show up. Rise above.</p><span>Classroom concept · Demo shopping only<br>© <span id="year">2026</span> ROAM</span></footer>
+
+  <dialog id="fit-dialog" class="modal" aria-labelledby="fit-title">
+    <button class="close-dialog" aria-label="Close fit guide">×</button><p class="eyebrow">A LITTLE GUIDANCE</p><h2 id="fit-title">Find your fit.</h2><p>Lay a favorite tee flat. Measure across the chest, just below the sleeves, and compare it with this sample guide.</p>
+    <table><caption>Illustrative garment measurements, in inches</caption><thead><tr><th scope="col">Size</th><th scope="col">Chest width</th><th scope="col">Length</th></tr></thead><tbody><tr><th scope="row">XS</th><td>18</td><td>26</td></tr><tr><th scope="row">S</th><td>19</td><td>27</td></tr><tr><th scope="row">M</th><td>20</td><td>28</td></tr><tr><th scope="row">L</th><td>21</td><td>29</td></tr><tr><th scope="row">XL</th><td>22</td><td>30</td></tr><tr><th scope="row">XXL</th><td>23</td><td>31</td></tr></tbody></table><p class="small-note">SAMPLE SIZING FOR THIS CLASSROOM CONCEPT.</p>
+  </dialog>
+  <dialog id="bag-dialog" class="modal bag-modal" aria-labelledby="bag-title"><button class="close-dialog" aria-label="Close bag">×</button><p class="eyebrow">READY TO MEET THE MOMENT</p><h2 id="bag-title">Your bag.</h2><div id="bag-items"></div><div class="bag-total"><span>Subtotal</span><strong id="bag-total">$0</strong></div><p class="muted">Demo bag only. No payment or order is collected.</p><button class="button button-primary" id="keep-going">Keep going <span>↗</span></button></dialog>
+</body>
+</html>

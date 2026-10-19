@@ -1,0 +1,26 @@
+{
+  "name": "is117-web-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --runInBand",
+    "dev": "node tools/dev.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "jest": "^30.5.2",
+    "nodemon": "^3.1.14"
+  }
+}

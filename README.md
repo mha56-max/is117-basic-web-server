@@ -4,6 +4,25 @@ A six-part textbook for students who have never built a program or used a web se
 
 The application stays small: **one `index.js`, one test file, Express, and Jest**. The explanations live in the lessons so the code remains easy to read.
 
+## Local development with live reload
+
+Run `npm run dev` from this folder or from `is117-web-server`. Open
+`http://localhost:3000` once, then save your changes:
+
+- HTML and browser JavaScript changes automatically refresh the page.
+- CSS and image changes update through BrowserSync without restarting Express.
+- Server JavaScript changes restart Express, then refresh the browser when it is ready.
+
+Press **Ctrl+C** to stop both the development proxy and Express. Do not run
+`npm start` and `npm run dev` at the same time: both use browser port 3000.
+`npm start` remains available for a regular server without file watching.
+
+BrowserSync serves the browser on port 3000 and proxies Express on port 3001.
+Use `PORT` and `APP_PORT` to choose different ports if needed. Server restarts
+clear the example API's in-memory message; front-end edits do not restart it.
+Development dependencies are recorded in each project's package and lockfile;
+run `npm ci` in the project folder after downloading a fresh copy.
+
 ## Start here
 
 Read [setup](docs/setup.md), then [Part 1](docs/lessons/01-node-and-terminal.md). You do not need an existing project or any programming knowledge. The lessons explain which commands belong in the terminal and which code belongs in a file.

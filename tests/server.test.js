@@ -23,20 +23,28 @@ afterAll(async () => {
   }
 });
 
-test('the home page sends a successful response', async () => {
+test('the root entry point serves the ROAM homepage', async () => {
   // fetch sends a request, like visiting a page in a browser.
   const response = await fetch(`${baseUrl}/`);
 
   // Check both the status number and the text sent back by the server.
   expect(response.status).toBe(200);
-  expect(await response.text()).toBe('Hello, IS117! Your web server is working.');
+  expect(response.headers.get('content-type')).toContain('text/html');
+  const html = await response.text();
+  expect(html).toContain('SHOW UP.');
+  expect(html).toMatch(/<nav aria-label="Main navigation">[\s\S]*href="\/about"[\s\S]*<\/nav>/);
+  expect(html).toContain('/assets/roam-rise.png');
 });
 
-test('the about page explains what a web server does', async () => {
+test('the about page serves the ROAM brand story as HTML', async () => {
   const response = await fetch(`${baseUrl}/about`);
 
   expect(response.status).toBe(200);
-  expect(await response.text()).toBe('A web server receives a request and sends a response.');
+  expect(response.headers.get('content-type')).toContain('text/html');
+  const html = await response.text();
+  expect(html).toContain('id="about-title"');
+  expect(html).toContain('EVERYDAY COURAGE.');
+  expect(html).toContain('href="/#the-tee"');
 });
 
 test('a missing page sends a 404 response', async () => {
