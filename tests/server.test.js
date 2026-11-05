@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('./index');
+const app = require('../index');
 
 describe('Web Server', () => {
   test('home page works', async () => {
